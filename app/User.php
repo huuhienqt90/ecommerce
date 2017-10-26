@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Check is supper admin or not
+     */
+    public function isSupperAdmin(){
+        return true;
+    }
 }

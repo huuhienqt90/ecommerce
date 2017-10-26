@@ -8,65 +8,41 @@ use Illuminate\Routing\Controller;
 
 class DashboardController extends Controller
 {
+    protected $menuActive = 'dashboard';
+    protected $subMenuActive = 'dashboard';
+    protected $pageTitle;
+    protected $siteTitle;
+    protected $subPageTitle;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/dashboard';
+
     /**
      * Display a listing of the resource.
      * @return Response
      */
     public function index()
     {
-        return view('dashboard::index');
+        return $this->viewDashboard('index');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a view with data(s).
      * @return Response
      */
-    public function create()
-    {
-        return view('dashboard::create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     * @param  Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-    }
-
-    /**
-     * Show the specified resource.
-     * @return Response
-     */
-    public function show()
-    {
-        return view('dashboard::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @return Response
-     */
-    public function edit()
-    {
-        return view('dashboard::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param  Request $request
-     * @return Response
-     */
-    public function update(Request $request)
-    {
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @return Response
-     */
-    public function destroy()
-    {
+    public function viewDashboard($view='dashboard', $newData = []){
+        $oldData = [
+            'menuActive' => $this->menuActive,
+            'subMenuActive' => $this->subMenuActive,
+            'pageTitle' => !empty($this->pageTitle) ? $this->pageTitle : trans('dashboard::dashboard.dashboard'),
+            'siteTitle' => !empty($this->siteTitle) ? $this->siteTitle : config('app.name', 'Laravel'),
+            'subPageTitle' => !empty($this->subPageTitle) ? $this->subPageTitle : null
+        ];
+        $data = array_merge($oldData, $newData);
+        return view('dashboard::'.$view, $data);
     }
 }

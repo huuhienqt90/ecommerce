@@ -1,0 +1,42 @@
+<?php
+
+return [
+    'home'                  => 'Trang chủ',
+    'dashboard'             => 'Bảng điều khiển',
+    'profile'               => 'Hồ sơ cá nhân',
+    'logout'                => 'Đăng xuất',
+    'main-navigation'       => 'Trình đơn chính',
+    'login-box-msg'         => 'Đăng nhập để bắt đầu quản lý website',
+    'email'                 => 'Địa chỉ email',
+    'password'              => 'Mật khẩu',
+    'remember'              => 'Ghi nhớ tôi',
+    'signin'                => 'Đăng nhập',
+    'ask-doctor'            => 'Hỏi bác sĩ',
+    'categories'            => 'Chuyên mục',
+    'category'              => 'chuyên mục',
+    'questions'             => 'Câu hỏi',
+    'mail'                  => 'Hộp thư',
+    'users'                 => 'Thành viên',
+    'user-type'             => 'Loại thành viên',
+    'user-certificate'      => 'Bằng cấp',
+    'user-position'         => 'Chức vụ',
+    'user-package'          => 'Gói thành viên',
+    'list'                  => [
+        'index'                 => 'Danh sách :name',
+        'create'                => 'Tạo mới :name',
+        'show'                  => 'Chi tiết :name',
+        'edit'                  => 'Sửa :name',
+        'delete'                => 'Xóa :name',
+        'success'               => ':message thành công',
+        'fail'                  => ':message thất bại',
+        'not-found'             => 'Không tìm thấy bất kỳ :name nào trong hệ thống. Nhấn vào <a href=":link">đây</a> để tạo mới :name'
+    ],
+    'image'                 => 'Hình ảnh',
+    'name'                  => 'Tên',
+    'description'           => 'Mô tả',
+    'actions'               => 'Hành động',
+    'create'                => 'Thêm mới',
+    'edit'                  => 'Sửa',
+    'delete'                => 'Xóa',
+
+];
