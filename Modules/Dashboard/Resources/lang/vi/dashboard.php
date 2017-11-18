@@ -17,20 +17,6 @@ return [
     'questions'             => 'Câu hỏi',
     'mail'                  => 'Hộp thư',
     'users'                 => 'Thành viên',
-    'user-type'             => 'Loại thành viên',
-    'user-certificate'      => 'Bằng cấp',
-    'user-position'         => 'Chức vụ',
-    'user-package'          => 'Gói thành viên',
-    'list'                  => [
-        'index'                 => 'Danh sách :name',
-        'create'                => 'Tạo mới :name',
-        'show'                  => 'Chi tiết :name',
-        'edit'                  => 'Sửa :name',
-        'delete'                => 'Xóa :name',
-        'success'               => ':message thành công',
-        'fail'                  => ':message thất bại',
-        'not-found'             => 'Không tìm thấy bất kỳ :name nào trong hệ thống. Nhấn vào <a href=":link">đây</a> để tạo mới :name'
-    ],
     'image'                 => 'Hình ảnh',
     'name'                  => 'Tên',
     'description'           => 'Mô tả',
@@ -38,5 +24,4 @@ return [
     'create'                => 'Thêm mới',
     'edit'                  => 'Sửa',
     'delete'                => 'Xóa',
-
 ];

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'first_name', 'last_name', 'gender', 'avatar', 'cover', 'birthday', 'phone', 'address', 'is_admin', 'is_notification'
     ];
 
     /**
@@ -31,6 +31,6 @@ class User extends Authenticatable
      * Check is supper admin or not
      */
     public function isSupperAdmin(){
-        return true;
+        return $this->is_admin;
     }
 }
