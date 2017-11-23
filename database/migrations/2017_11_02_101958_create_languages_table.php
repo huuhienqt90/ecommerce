@@ -15,12 +15,14 @@ class CreateLanguagesTable extends Migration
     {
         Schema::create('languages', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('code');
             $table->string('locale');
-            $table->string('flag')->nullable();
+            $table->string('image')->nullable();
             $table->string('direction')->default('ltr');
+            $table->tinyInteger('is_default')->default(0);
+            $table->integer('position')->default(0);
             $table->string('status')->default('active');
-            $table->integer('is_default')->default(0);
             $table->timestamps();
         });
     }
