@@ -2,7 +2,6 @@
 
 // Check if have language and make some change for each language
 try {
-
     // Get all language codes
     $allLanguageCodes = \App\Models\Language::getAllLanguageCodes();
 
@@ -23,14 +22,15 @@ try {
             Route::get('/', function () use ($defaultLanguageCode) {
                 return redirect()->to($defaultLanguageCode);
             });
+
             Route::group(['prefix' => $currentLanguageCode], function () use($currentLanguageCode) {
                 /*Set locale*/
                 app()->setLocale($currentLanguageCode);
                 adminRoute();
             });
         }else{
-            Route::get('/'.$currentLanguageCode, function () use ($defaultLanguageCode) {
-                return redirect()->to($defaultLanguageCode);
+            Route::get('/'.$currentLanguageCode, function () use ($defaultLanguageCode, $currentLanguageCode) {
+                return redirect()->to($defaultLanguageCode.'/'.$currentLanguageCode);
             });
         }
     }else{
