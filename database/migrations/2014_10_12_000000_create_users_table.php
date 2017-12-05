@@ -37,6 +37,9 @@ class CreateUsersTable extends Migration
             $table->string('key');
             $table->longText('value')->nullable();
             $table->string('status')->default('active');
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
